@@ -1,0 +1,43 @@
+.row{
+    display: flex;
+    margin: 20px;
+}
+
+.post{
+    width:400px;
+    min-height: 200px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.main-content{
+    text-align: justify;
+}
+
+.title{
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.author{
+    font-family: monospace;
+    font-size: 24px;
+    color: #5555c7;
+}
+.text{
+    margin: 15px 0;
+}
+
+.time{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+

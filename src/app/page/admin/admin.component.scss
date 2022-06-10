@@ -1,0 +1,80 @@
+.row{
+    margin: 0 100px;
+}
+
+.form-add{
+    input, textarea{
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        border: 1px solid #252b25;
+        padding: 10px 20px;
+        border-radius: 5px;
+        &:focus{
+            box-shadow: 0 0 5px 1px #252b25;
+        }
+    }
+}
+
+.btn-group{
+    margin: 20px 0;
+}
+
+.table{
+    &__item{
+        display: flex;
+        padding: 15px 0;
+        border-bottom: 1px solid #252b25;
+        
+        &:nth-of-type(1){
+            border-top: 1px solid #252b25;
+            font-weight: bold;
+        }
+        p{
+            &:nth-of-type(1){
+                width: 5%;
+                text-align: center;
+            }
+            &:nth-of-type(2){
+                width: 15%;
+            }
+            &:nth-of-type(3){
+                width: 35%;
+            }
+            &:nth-of-type(4){
+                width: 15%;
+            }
+            &:nth-of-type(5),
+            &:nth-of-type(6) {
+                width: 15%;
+                text-align: center;
+            }
+
+        }
+    }
+}
+
+
+
+
+.btn{
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    color: white;
+    background-color: #1d1b1b;
+    &:hover{
+        background-color: #4e363f;
+    }
+    &:active{
+        background-color: #5fdf65;
+    }
+    &:disabled{
+        background-color: #ccc; 
+    }
+}
+
+.btn-edit{
+    background-color: #b4aeae;
+    color: #1d1b1b;
+}

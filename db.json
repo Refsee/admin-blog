@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpUuSKIbKRYBPgbDkM5tNXpiDUAZ86gJiPSw&usqp=CAU",
+      "title": "food",
+      "message": "some text 1",
+      "posterBy": "I",
+      "id": 1
+    }
+  ]
+}

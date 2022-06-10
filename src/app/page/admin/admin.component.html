@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="form-add">
+    <input
+      type="text"
+      class="input"
+      placeholder="title here..."
+      [(ngModel)]="title"
+    />
+    <textarea
+      class="area"
+      placeholder="text here..."
+      [(ngModel)]="message"
+    ></textarea>
+    <input
+      type="text"
+      class="input"
+      placeholder="author here..."
+      [(ngModel)]="author"
+    />
+    <div class="btn-group">
+      <button
+        class="btn"
+        (click)="addPost()"
+        *ngIf="!isEdit; else edit"
+        [disabled]="!title || !message || !author"
+      >
+        Add
+      </button>
+      <ng-template #edit>
+        <button
+          class="btn btn-edit"
+          [disabled]="!title || !message || !author"
+          (click)="upDate()"
+        >
+          Save edit
+        </button>
+      </ng-template>
+    </div>
+  </div>
+  <div class="table">
+    <div class="table__item">
+      <p>#</p>
+      <p>title</p>
+      <p>text</p>
+      <p>author</p>
+      <p>edit</p>
+      <p>delete</p>
+    </div>
+    <div class="table__item" *ngFor="let post of posts">
+      <p>{{ post.id }}</p>
+      <p>{{ post.title }}</p>
+      <p>
+        {{ post.message | slice: 0:30 }}
+        <span *ngIf="post.message.length > 30">...</span>
+      </p>
+      <p>{{ post.posterBy }}</p>
+      <p><button class="btn" (click)="editPost(post)">edit</button></p>
+      <p>
+        <button class="btn" (click)="deletePost(post.id)" [disabled]="isEdit">
+          delete
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
